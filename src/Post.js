@@ -2,8 +2,8 @@ import React from "react";
 import "./Post.css";
 function Post() {
   return (
-    <div className="post">
-      <h3>Username</h3>
+    <div className="container">
+      <h3>Justifiable</h3>
       {/* images */}
       <img
         className="post__image"
@@ -14,9 +14,9 @@ function Post() {
         alt=""
       />
       {/* uername + caption */}
-      <h4 className="post__text">
+      <p className="post__text">
         <strong>Justifiable</strong> What a beautiful day!
-      </h4>
+      </p>
     </div>
   );
 }
