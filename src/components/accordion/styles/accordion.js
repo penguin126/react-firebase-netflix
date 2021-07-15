@@ -22,6 +22,10 @@ export const Item = styled.div`
     margin-top: 3em;
   }
 
+  &:nth-child(6) {
+    margin-bottom: 30px;
+  }
+
   @media (max-width: 1000px) {
     max-width: 600px;
   }

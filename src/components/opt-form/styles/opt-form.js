@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   height: 100%;
-  margin-top: 20px;
   flex-wrap: wrap;
 
   @media (max-width: 1000px) {
@@ -32,7 +31,6 @@ export const Button = styled.button`
   align-items: center;
   height: 70px;
   background: #e50914;
-  text-transform: uppercase;
   color: white;
   padding: 0 32px;
   font-size: 26px;
@@ -65,8 +63,8 @@ export const Text = styled.p`
   color: white;
   text-align: center;
 
-  @media (max-width: 600px) {
-    font-size: 16px;
+  @media (max-width: 1000px) {
+    font-size: 22px;
     line-height: 22px;
   }
 `;
