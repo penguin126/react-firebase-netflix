@@ -8,7 +8,7 @@ import { useAuthListener } from "./hooks";
 export default function App() {
   // get auth user
   const { user } = useAuthListener();
-  console.log(user);
+
   return (
     <Router>
       <Route path={ROUTES.SIGN_IN}>
