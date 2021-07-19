@@ -1,43 +1,38 @@
-import React from "react";
-import { Footer } from "../components";
+import React from 'react';
+import { Footer } from '../components';
 
 export function FooterContainer() {
   return (
     <Footer>
-      <Footer.Title>Question? Contact us.</Footer.Title>
+      <Footer.Title>Bạn có câu hỏi? Liên hệ với chúng tôi.</Footer.Title>
       <Footer.Break />
       <Footer.Row>
         <Footer.Column>
-          <Footer.Link href="#">FAQ</Footer.Link>
-          <Footer.Link href="#">Investor Relations</Footer.Link>
-          <Footer.Link href="#">Ways to Watch</Footer.Link>
-          <Footer.Link href="#">Coporate Information</Footer.Link>
-          <Footer.Link href="#">Netflix Originals</Footer.Link>
+          <Footer.Link href="#">Câu hỏi thường gặp</Footer.Link>
+          <Footer.Link href="#">Quan hệ với nhà đầu tư</Footer.Link>
+          <Footer.Link href="#">Quyền riêng tư</Footer.Link>
+          <Footer.Link href="#">Kiểm tra tốc độ</Footer.Link>
         </Footer.Column>
-
         <Footer.Column>
-          <Footer.Link href="#">Help Centre</Footer.Link>
-          <Footer.Link href="#">Jobs</Footer.Link>
-          <Footer.Link href="#">Terms of Use</Footer.Link>
-          <Footer.Link href="#">Contact Us</Footer.Link>
+          <Footer.Link href="#">Trung tâm trợ giúp</Footer.Link>
+          <Footer.Link href="#">Việc làm</Footer.Link>
+          <Footer.Link href="#">Tùy chọn cookie</Footer.Link>
+          <Footer.Link href="#">Thông báo pháp lý</Footer.Link>
         </Footer.Column>
-
         <Footer.Column>
-          <Footer.Link href="#">Account</Footer.Link>
-          <Footer.Link href="#">Redeem Gift Code</Footer.Link>
-          <Footer.Link href="#">Privacy</Footer.Link>
-          <Footer.Link href="#">Speed Test</Footer.Link>
+          <Footer.Link href="#">Tài khoản</Footer.Link>
+          <Footer.Link href="#">Các cách xem</Footer.Link>
+          <Footer.Link href="#">Thông tin doanh nghiệp</Footer.Link>
+          <Footer.Link href="#">Chỉ có trên Netflix</Footer.Link>
         </Footer.Column>
-
         <Footer.Column>
-          <Footer.Link href="#">Media Centre</Footer.Link>
-          <Footer.Link href="#">Buy Gift Code</Footer.Link>
-          <Footer.Link href="#">Cookie Preferences</Footer.Link>
-          <Footer.Link href="#">Legal Notices</Footer.Link>
+          <Footer.Link href="#">Trung tâm đa phương tiện</Footer.Link>
+          <Footer.Link href="#">Điều khoản sử dụng</Footer.Link>
+          <Footer.Link href="#">Liên hệ với chúng tôi</Footer.Link>
         </Footer.Column>
       </Footer.Row>
       <Footer.Break />
-      <Footer.Text>Netflix United Kingdom</Footer.Text>
+      <Footer.Text>Netflix Việt Nam</Footer.Text>
     </Footer>
   );
 }

@@ -1,31 +1,35 @@
-import React from "react";
-import { OptForm } from "../components";
-import { JumbotronContaier } from "../containers/jumbotron";
-import { FooterContainer } from "../containers/footer";
-import { FaqsContainer } from "../containers/faqs";
-import { HeaderContainer } from "../containers/header";
-import { Feature } from "../components";
+import React from 'react';
+import { Feature, OptForm } from '../components';
+import { HeaderContainer } from '../containers/header';
+import { JumbotronContainer } from '../containers/jumbotron';
+import { FaqsContainer } from '../containers/faqs';
+import { FooterContainer } from '../containers/footer';
 
 export default function Home() {
   return (
     <>
       <HeaderContainer>
         <Feature>
-          <Feature.Title>Unlimited films, TV programes and more.</Feature.Title>
+          <Feature.Title>
+            Chương trình truyền hình, phim không giới hạn và nhiều nội dung
+            khác.
+          </Feature.Title>
           <Feature.SubTitle>
-            Watch anywhere. Cancel at any time.
+            Xem ở mọi nơi. Hủy bất kỳ lúc nào.
           </Feature.SubTitle>
           <OptForm.Text>
-            Ready to watch? Enter your email to create or restart your
-            membership
+            Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư
+            cách thành viên của bạn.
           </OptForm.Text>
           <OptForm>
-            <OptForm.Input placeholder="Email address" />
-            <OptForm.Button>Get Started</OptForm.Button>
+            <OptForm.WrapDescription />
+            <OptForm.Button>Bắt đầu</OptForm.Button>
+            <OptForm.Break />
           </OptForm>
         </Feature>
       </HeaderContainer>
-      <JumbotronContaier />
+
+      <JumbotronContainer />
       <FaqsContainer />
       <FooterContainer />
     </>

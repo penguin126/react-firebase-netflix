@@ -1,19 +1,18 @@
-import Firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/auth";
-import { seedDatabase } from "../seed";
+import Firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+import { seedDatabase } from '../seed';
 
 const config = {
-  apiKey: "AIzaSyBL2uVF0o875T4l1X8rwC1JoyDUbqQJ2U0",
-  authDomain: "netflix-69782.firebaseapp.com",
-  projectId: "netflix-69782",
-  storageBucket: "netflix-69782.appspot.com",
-  messagingSenderId: "547749381829",
-  appId: "1:547749381829:web:0f2724dde4bd31959952ac",
+  apiKey: 'AIzaSyAusmTYHeJpmjZvgmZUGwNZc0X1hLTcqlg',
+  authDomain: 'netflix2-4e52c.firebaseapp.com',
+  projectId: 'netflix2-4e52c',
+  storageBucket: 'netflix2-4e52c.appspot.com',
+  messagingSenderId: '608524471262',
+  appId: '1:608524471262:web:53fa4806246e23f40deb4f',
 };
 
 const firebase = Firebase.initializeApp(config);
 
 seedDatabase(firebase);
-
 export { firebase };

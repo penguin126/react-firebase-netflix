@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Container,
   Row,
@@ -7,7 +7,7 @@ import {
   Title,
   Text,
   Break,
-} from "./styles/footer";
+} from './styles/footer';
 
 export default function Footer({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -33,6 +33,6 @@ Footer.Text = function FooterText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 };
 
-Footer.Break = function FooterBreak({ children, ...restProps }) {
-  return <Break {...restProps}>{children}</Break>;
+Footer.Break = function FooterBreak({ ...restProps }) {
+  return <Break {...restProps} />;
 };
