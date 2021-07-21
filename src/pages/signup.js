@@ -74,7 +74,10 @@ export default function SignUp() {
               Đăng ký
             </Form.Submit>
           </Form.Base>
-
+          <Form.FBLogin>
+            <Form.FBIcon />
+            <Form.FBText>Đăng ký bằng tài khoản Facebook</Form.FBText>
+          </Form.FBLogin>
           <Form.Text>
             Bạn đã có tài khoản?
             <Form.Link to="/signin"> Đăng nhập ngay.</Form.Link>
@@ -84,8 +87,8 @@ export default function SignUp() {
             robot. Tìm hiểu thêm.
           </Form.TextSmall>
         </Form>
+        <FooterContainer />
       </HeaderContainer>
-      <FooterContainer />
     </>
   );
 }

@@ -1,16 +1,21 @@
 import styled from 'styled-components/macro';
 
 export const Container = styled.div`
+  width: 100%;
+  margin-top: 0;
+  background: rgba(0, 0, 0, 0.5);
+`;
+
+export const Wrap = styled.div`
   display: flex;
   padding: 30px 0;
-  margin: auto;
+  margin: 0 auto;
   max-width: 1000px;
   flex-direction: column;
   @media (max-width: 1000px) {
     padding: 30px 30px;
   }
 `;
-
 export const Column = styled.div`
   display: flex;
   flex-direction: column;

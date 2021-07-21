@@ -13,7 +13,7 @@ export const Inner = styled.div`
   display: flex;
   padding: 70px 45px;
   flex-direction: column;
-  max-width: 815px;
+  max-width: 950px;
   margin: auto;
   align-items: center;
 `;
@@ -35,7 +35,7 @@ export const Item = styled.div`
   color: white;
   margin: auto;
   margin-bottom: 10px;
-  max-width: 700px;
+  max-width: 815px;
   width: 100%;
 
   &:first-of-type {

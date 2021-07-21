@@ -41,6 +41,7 @@ export const Text = styled.p`
   color: #737373;
   font-size: 16px;
   font-weight: 500;
+  margin-bottom: 0;
 `;
 
 export const TextSmall = styled.p`
@@ -50,6 +51,14 @@ export const TextSmall = styled.p`
   color: #8c8c8c;
 `;
 
+export const Recaptcha = styled.span`
+  color: #0071eb;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`;
 export const Link = styled(ReachRouterLink)`
   color: #fff;
   text-decoration: none;
@@ -88,4 +97,92 @@ export const Submit = styled.button`
   &:disabled {
     opacity: 0.5;
   }
+`;
+
+export const LoginHelp = styled.div`
+  display: flex;
+`;
+export const RememberMe = styled.div`
+  flex-grow: 1;
+  padding-left: 20px;
+  position: relative;
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 16px;
+`;
+export const Checkbox = styled.input`
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+`;
+export const LabelCheckbox = styled.label`
+  padding: 0;
+  color: #333;
+  position: relative;
+  display: block;
+  line-height: 1.2;
+`;
+export const LabelCheckboxText = styled.span`
+  color: #b3b3b3;
+  font-size: 13px;
+  font-weight: 500;
+
+  &::after {
+    color: #000;
+    font-size: 18px;
+    left: -21px;
+    top: -2px;
+    content: ' ';
+    position: absolute;
+  }
+
+  &::before {
+    background: #737373;
+    border-radius: 2px;
+    border: 0;
+    height: 16px;
+    left: -20px;
+    width: 16px;
+    content: ' ';
+    position: absolute;
+    display: block;
+    top: 2px;
+    padding: 0;
+  }
+`;
+
+export const HelpLink = styled.a`
+  cursor: pointer;
+  color: #b3b3b3;
+  flex: 0 0 1;
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 2px;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const FBLogin = styled.div`
+  background: 0 0;
+  color: #0080ff;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  padding-top: 30px;
+`;
+
+export const FBIcon = styled.img`
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+`;
+
+export const FBText = styled.span`
+  color: #737373;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
 `;

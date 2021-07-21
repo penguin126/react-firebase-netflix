@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Container,
   Input,
@@ -13,12 +13,16 @@ export default function OptForm({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-OptForm.WrapDescription = function OptFormWrapDescription({ ...restProps }) {
-  const [activeState, setActiveState] = useState(false);
+OptForm.WrapDescription = function OptFormWrapDescription({
+  active,
+  children,
+  ...restProps
+}) {
   return (
     <WrapDescription {...restProps}>
-      <Input onClick={() => setActiveState(true)} />
-      <InputLabel active={activeState}>Địa chỉ email</InputLabel>
+      <Input />
+      <InputLabel active={active}>Địa chỉ email</InputLabel>
+      {children}
     </WrapDescription>
   );
 };

@@ -1,5 +1,25 @@
 import React from 'react';
-import { Container, Error, Base, Title, Text, TextSmall, Link, Input, Submit } from './styles/form';
+import {
+  Container,
+  Error,
+  Base,
+  Title,
+  Text,
+  TextSmall,
+  Link,
+  Input,
+  Submit,
+  Recaptcha,
+  LoginHelp,
+  RememberMe,
+  HelpLink,
+  Checkbox,
+  LabelCheckbox,
+  LabelCheckboxText,
+  FBLogin,
+  FBIcon,
+  FBText,
+} from './styles/form';
 
 export default function Form({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -25,6 +45,9 @@ Form.TextSmall = function FormTextSmall({ children, ...restProps }) {
   return <TextSmall {...restProps}>{children}</TextSmall>;
 };
 
+Form.Recaptcha = function FormRecaptcha({ children, ...restProps }) {
+  return <Recaptcha {...restProps}>{children}</Recaptcha>;
+};
 Form.Link = function FormLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
@@ -35,4 +58,40 @@ Form.Input = function FormInput({ children, ...restProps }) {
 
 Form.Submit = function FormSubmit({ children, ...restProps }) {
   return <Submit {...restProps}>{children}</Submit>;
+};
+
+Form.LoginHelp = function FormLoginHelp({ children, ...restProps }) {
+  return <LoginHelp {...restProps}>{children}</LoginHelp>;
+};
+
+Form.RememberMe = function FormRememberMe({ children, ...restProps }) {
+  return <RememberMe {...restProps}>{children}</RememberMe>;
+};
+
+Form.HelpLink = function FormHelpLink({ children, ...restProps }) {
+  return <HelpLink {...restProps}>{children}</HelpLink>;
+};
+
+Form.Checkbox = function FormCheckbox({ ...restProps }) {
+  return <Checkbox {...restProps} type="checkbox" />;
+};
+
+Form.LabelCheckbox = function FormLabelCheckbox({ ...restProps }) {
+  return <LabelCheckbox {...restProps} />;
+};
+
+Form.LabelCheckboxText = function FormLabelCheckboxText({ ...restProps }) {
+  return <LabelCheckboxText {...restProps} />;
+};
+
+Form.FBLogin = function FormFBLogin({ children, ...restProps }) {
+  return <FBLogin {...restProps}>{children}</FBLogin>;
+};
+
+Form.FBIcon = function FormFBIcon({ ...restProps }) {
+  return <FBIcon {...restProps} src="./images/icons/fb.png" />;
+};
+
+Form.FBText = function FormFBText({ children, ...restProps }) {
+  return <FBText {...restProps}>{children}</FBText>;
 };

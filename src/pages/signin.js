@@ -31,7 +31,6 @@ export default function SignIn() {
         setError(error.message);
       });
   };
-
   return (
     <>
       <HeaderContainer>
@@ -60,18 +59,31 @@ export default function SignIn() {
               Đăng nhập
             </Form.Submit>
           </Form.Base>
-
+          <Form.LoginHelp>
+            <Form.RememberMe>
+              <Form.Checkbox />
+              <Form.LabelCheckbox>
+                <Form.LabelCheckboxText>Ghi nhớ tôi</Form.LabelCheckboxText>
+              </Form.LabelCheckbox>
+            </Form.RememberMe>
+            <Form.HelpLink>Bạn cần trợ giúp?</Form.HelpLink>
+          </Form.LoginHelp>
+          <Form.FBLogin>
+            <Form.FBIcon />
+            <Form.FBText>Đăng nhập bằng tài khoản Facebook</Form.FBText>
+          </Form.FBLogin>
           <Form.Text>
             Bạn mới tham gia Netflix?
             <Form.Link to="/signup"> Đăng ký ngay.</Form.Link>
           </Form.Text>
           <Form.TextSmall>
             Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải là
-            robot. Tìm hiểu thêm.
+            robot.
+            <Form.Recaptcha>Tìm hiểu thêm.</Form.Recaptcha>
           </Form.TextSmall>
         </Form>
+        <FooterContainer />
       </HeaderContainer>
-      <FooterContainer />
     </>
   );
 }

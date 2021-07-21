@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Feature, OptForm } from '../components';
 import { HeaderContainer } from '../containers/header';
 import { JumbotronContainer } from '../containers/jumbotron';
 import { FaqsContainer } from '../containers/faqs';
 import { FooterContainer } from '../containers/footer';
 
-export default function Home() {
+export default function Home(props) {
+  const [activeState, setActiveState] = useState(false);
   return (
     <>
       <HeaderContainer>
@@ -22,8 +23,14 @@ export default function Home() {
             cách thành viên của bạn.
           </OptForm.Text>
           <OptForm>
-            <OptForm.WrapDescription />
-            <OptForm.Button>Bắt đầu</OptForm.Button>
+            <OptForm.WrapDescription
+              active={activeState}
+              onClick={() => setActiveState(true)}
+            />
+            {props.childrens}
+            <OptForm.Button onClick={() => setActiveState(true)}>
+              Bắt đầu
+            </OptForm.Button>
             <OptForm.Break />
           </OptForm>
         </Feature>

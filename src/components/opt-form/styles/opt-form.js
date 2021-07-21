@@ -24,6 +24,9 @@ export const Input = styled.input`
   height: 70px;
   box-sizing: border-box;
   font-size: 16px;
+  @media (max-width: 600px) {
+    min-width: 380px;
+  }
 `;
 
 export const InputLabel = styled.label`
@@ -76,7 +79,7 @@ export const Button = styled.button`
 `;
 
 export const Text = styled.p`
-  font-size: 17.3px;
+  font-size: 19.2px;
   color: white;
   text-align: center;
   margin: 0;

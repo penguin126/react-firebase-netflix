@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Accordion, OptForm } from '../components';
 import faqsData from '../fixtures/faqs';
 
 export function FaqsContainer() {
+  const [activeState, setActiveState] = useState(false);
   return (
     <Accordion>
       <Accordion.Title>Câu hỏi thường gặp</Accordion.Title>
@@ -20,8 +21,13 @@ export function FaqsContainer() {
         thành viên của bạn.
       </OptForm.Text>
       <OptForm>
-        <OptForm.WrapDescription />
-        <OptForm.Button>Bắt đầu</OptForm.Button>
+        <OptForm.WrapDescription
+          active={activeState}
+          onClick={() => setActiveState(true)}
+        />
+        <OptForm.Button onClick={() => setActiveState(true)}>
+          Bắt đầu
+        </OptForm.Button>
         <OptForm.Break />
       </OptForm>
     </Accordion>

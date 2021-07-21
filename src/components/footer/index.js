@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Container,
+  Wrap,
   Row,
   Column,
   Link,
@@ -12,6 +13,10 @@ import {
 export default function Footer({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
+
+Footer.Wrap = function FooterWrap({ children, ...restProps }) {
+  return <Wrap {...restProps}>{children}</Wrap>;
+};
 
 Footer.Row = function FooterRow({ children, ...restProps }) {
   return <Row {...restProps}>{children}</Row>;
