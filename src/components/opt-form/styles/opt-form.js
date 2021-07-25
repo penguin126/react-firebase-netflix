@@ -20,7 +20,7 @@ export const Input = styled.input`
   min-width: 500px;
   width: 100%;
   border: 0;
-  padding: 10px;
+  padding: 10px 10px 0;
   height: 70px;
   box-sizing: border-box;
   font-size: 16px;
@@ -31,7 +31,7 @@ export const Input = styled.input`
 
 export const InputLabel = styled.label`
   position: absolute;
-  top: ${({ active }) => (active === true ? '7px' : '40%')};
+  top: ${({ active }) => (active === true ? '7px' : '31%')};
   font-size: ${({ active }) => (active === true ? '13px' : '16px')};
   font-weight: ${({ active }) => (active === true ? '550' : 'normal')};
   left: 11px;
@@ -87,4 +87,15 @@ export const Text = styled.p`
     font-size: 16px;
     line-height: 22px;
   }
+`;
+export const ErrorMessage = styled.div`
+  position: absolute;
+  color: #ffa00a;
+  text-align: left;
+  margin-bottom: -6px;
+  padding: 6px 3px;
+  font-size: 15px;
+  top: 100%;
+  opacity: ${({ getOpacity }) => (getOpacity ? '1' : '0')};
+  visibility: ${({ activeState }) => (activeState ? 'visible' : 'hidden')};
 `;

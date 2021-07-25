@@ -7,6 +7,7 @@ import {
   Text,
   InputLabel,
   WrapDescription,
+  ErrorMessage,
 } from './styles/opt-form';
 
 export default function OptForm({ children, ...restProps }) {
@@ -16,17 +17,28 @@ export default function OptForm({ children, ...restProps }) {
 OptForm.WrapDescription = function OptFormWrapDescription({
   active,
   children,
+  setInputValue,
   ...restProps
 }) {
   return (
     <WrapDescription {...restProps}>
-      <Input />
-      <InputLabel active={active}>Địa chỉ email</InputLabel>
       {children}
+      <Input
+        onChange={(e) => {
+          setInputValue(e.target.value);
+        }}
+      />
+      <InputLabel active={active}>Địa chỉ email</InputLabel>
     </WrapDescription>
   );
 };
 
+OptForm.ErrorMessage = function OptFormErrorMessage({
+  children,
+  ...restProps
+}) {
+  return <ErrorMessage {...restProps}>{children}</ErrorMessage>;
+};
 OptForm.Button = function OptFormButton({ children, ...restProps }) {
   return (
     <Button {...restProps}>

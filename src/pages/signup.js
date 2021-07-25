@@ -15,8 +15,6 @@ export default function SignUp() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const isInvalid = firstName === '' || password === '' || emailAddress === '';
-
   const handleSignup = (event) => {
     event.preventDefault();
 
@@ -41,6 +39,23 @@ export default function SignUp() {
       });
   };
 
+  function emailValidated(value) {
+    var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return regex.test(value) || value.charAt(0) === '0'
+      ? undefined
+      : 'Vui lòng nhập email hoặc số điện thoại hợp lệ.';
+  }
+
+  function passWordValidated(value) {
+    return value.length >= 4 && value.length <= 60
+      ? undefined
+      : 'Mật khẩu của bạn phải chứa từ 4 đến 60 ký tự.';
+  }
+
+  var id = emailValidated(emailAddress);
+  var pw = passWordValidated(password);
+  const isInvalid = id !== undefined || pw !== undefined;
+
   return (
     <>
       <HeaderContainer>
@@ -54,18 +69,28 @@ export default function SignUp() {
               value={firstName}
               onChange={({ target }) => setFirstName(target.value)}
             />
-            <Form.Input
-              placeholder="Địa chỉ email"
-              value={emailAddress}
-              onChange={({ target }) => setEmailAddress(target.value)}
-            />
-            <Form.Input
-              type="password"
-              value={password}
-              autoComplete="off"
-              placeholder="Mật khẩu"
-              onChange={({ target }) => setPassword(target.value)}
-            />
+            <Form.WrapInput>
+              <Form.Input
+                placeholder="Địa chỉ email"
+                value={emailAddress}
+                onChange={({ target }) => setEmailAddress(target.value)}
+              />
+              {id !== undefined && emailAddress !== '' ? (
+                <Form.InputError>{id}</Form.InputError>
+              ) : null}
+            </Form.WrapInput>
+            <Form.WrapInput>
+              <Form.Input
+                type="password"
+                value={password}
+                autoComplete="off"
+                placeholder="Mật khẩu"
+                onChange={({ target }) => setPassword(target.value)}
+              />
+              {pw !== undefined && password !== '' ? (
+                <Form.InputError>{pw}</Form.InputError>
+              ) : null}
+            </Form.WrapInput>
             <Form.Submit
               disabled={isInvalid}
               type="submit"

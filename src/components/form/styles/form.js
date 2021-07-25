@@ -67,7 +67,9 @@ export const Link = styled(ReachRouterLink)`
     text-decoration: underline;
   }
 `;
-
+export const WrapInput = styled.div`
+  position: relative;
+`;
 export const Input = styled.input`
   background: #333;
   border-radius: 4px;
@@ -77,10 +79,22 @@ export const Input = styled.input`
   line-height: 50px;
   padding: 5px 20px;
   margin-bottom: 20px;
+  width: 100%;
 
   &:last-of-type {
     margin-bottom: 30px;
   }
+`;
+
+export const InputError = styled.div`
+  position: absolute;
+  left: 0;
+  top: 100%;
+  color: #e87c03;
+  margin-bottom: -6px;
+  padding: 6px 3px;
+  top: 66%;
+  font-size: 13px;
 `;
 
 export const Submit = styled.button`
@@ -112,9 +126,12 @@ export const RememberMe = styled.div`
 `;
 export const Checkbox = styled.input`
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  z-index: 999;
+  width: 16px;
+  height: 21px;
 `;
 export const LabelCheckbox = styled.label`
   padding: 0;
@@ -127,29 +144,6 @@ export const LabelCheckboxText = styled.span`
   color: #b3b3b3;
   font-size: 13px;
   font-weight: 500;
-
-  &::after {
-    color: #000;
-    font-size: 18px;
-    left: -21px;
-    top: -2px;
-    content: ' ';
-    position: absolute;
-  }
-
-  &::before {
-    background: #737373;
-    border-radius: 2px;
-    border: 0;
-    height: 16px;
-    left: -20px;
-    width: 16px;
-    content: ' ';
-    position: absolute;
-    display: block;
-    top: 2px;
-    padding: 0;
-  }
 `;
 
 export const HelpLink = styled.a`

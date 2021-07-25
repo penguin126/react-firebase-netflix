@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Error,
@@ -7,7 +7,9 @@ import {
   Text,
   TextSmall,
   Link,
+  WrapInput,
   Input,
+  InputError,
   Submit,
   Recaptcha,
   LoginHelp,
@@ -52,8 +54,16 @@ Form.Link = function FormLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
 
+Form.WrapInput = function FormWrapInput({ children, ...restProps }) {
+  return <WrapInput {...restProps}>{children}</WrapInput>;
+};
+
 Form.Input = function FormInput({ children, ...restProps }) {
   return <Input {...restProps}>{children}</Input>;
+};
+
+Form.InputError = function FormInputError({ children, ...restProps }) {
+  return <InputError {...restProps}>{children}</InputError>;
 };
 
 Form.Submit = function FormSubmit({ children, ...restProps }) {
@@ -72,8 +82,19 @@ Form.HelpLink = function FormHelpLink({ children, ...restProps }) {
   return <HelpLink {...restProps}>{children}</HelpLink>;
 };
 
-Form.Checkbox = function FormCheckbox({ ...restProps }) {
-  return <Checkbox {...restProps} type="checkbox" />;
+Form.Checkbox = function FormCheckbox({
+  checkedState,
+  setCheckedState,
+  ...restProps
+}) {
+  return (
+    <Checkbox
+      {...restProps}
+      type="checkbox"
+      checked={checkedState}
+      onChange={() => setCheckedState(!checkedState)}
+    />
+  );
 };
 
 Form.LabelCheckbox = function FormLabelCheckbox({ ...restProps }) {
